@@ -67,6 +67,17 @@
                                             <action selector="onStopLoadingButtonPressed:" destination="xxz-p8-8Yj" eventType="touchUpInside" id="Gba-IX-raA"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uas-xm-yMG">
+                                        <rect key="frame" x="171" y="10" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <state key="normal" title="Reload">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onReloadButtonPressed:" destination="xxz-p8-8Yj" eventType="touchUpInside" id="ZGn-XH-2yx"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -74,6 +85,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="myBackButton" destination="LDL-Fm-xcJ" id="3MT-hq-UOT"/>
+                        <outlet property="myForwardButton" destination="VCc-C2-7DD" id="uai-dH-veS"/>
                         <outlet property="myURLTextField" destination="ucN-gH-Cbw" id="CpV-aP-q4v"/>
                         <outlet property="myWebView" destination="VTj-Bf-YWO" id="dNj-2R-fN7"/>
                         <outlet property="onBackButtonPressed" destination="LDL-Fm-xcJ" id="f0a-23-SrT"/>

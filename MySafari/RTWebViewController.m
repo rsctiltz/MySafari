@@ -12,6 +12,8 @@
 @property (strong, nonatomic) IBOutlet UIWebView *myWebView;
 @property (strong, nonatomic) IBOutlet UITextField *myURLTextField;
 @property (strong, nonatomic) IBOutlet UIButton *onBackButtonPressed;
+@property (strong, nonatomic) IBOutlet UIButton *myBackButton;
+@property (strong, nonatomic) IBOutlet UIButton *myForwardButton;
 
 @end
 
@@ -20,7 +22,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    [self.myBackButton setEnabled:NO];
+
+    [self.myForwardButton  setEnabled:NO];
+
 }
 - (IBAction)onBackButtonPressed:(UIButton *)sender
 {
@@ -34,6 +40,10 @@
 {
     [self.myWebView stopLoading];
 }
+- (IBAction)onReloadButtonPressed:(UIButton *)sender {
+    [self.myWebView reload];
+}
+
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -43,7 +53,16 @@
 
     [textField resignFirstResponder];
 
+
     return YES;
 }
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [self.myBackButton setEnabled:[self.myWebView canGoBack]];
+    [self.myForwardButton setEnabled:[self.myWebView canGoForward]];
+    
+}
+
 
 @end
