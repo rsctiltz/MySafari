@@ -6,24 +6,19 @@
 //  Copyright (c) 2014 Ryan Tiltz. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RTWebViewController.h"
 
-@interface ViewController ()
+@interface RTWebViewController ()
+@property (strong, nonatomic) IBOutlet UIWebView *myWebView;
 
 @end
 
-@implementation ViewController
+@implementation RTWebViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
